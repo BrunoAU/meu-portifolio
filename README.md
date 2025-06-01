@@ -1,6 +1,6 @@
 # Meu Portifólio
 
-Um [portifólio](https://683ca156466de363ff63029a--delightful-brioche-c50ad2.netlify.app) para você conhecer um pouco mais sobre mim.
+Um [portifólio](https://delightful-brioche-c50ad2.netlify.app) para você conhecer um pouco mais sobre mim.
 
 # Portfólio – Bruno Augusto
 
