@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animal Quest - Bruno Augusto</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+    .voltar {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 15px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .voltar:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="language-selector">
+    <button data-lang="pt">🇧🇷 Português</button>
+    <button data-lang="en">🇺🇸 English</button>
+    <button id="toggle-theme">🌓 Tema</button>
+  </div>
+
+  <header>
+    <h1 class="lang-pt">Projeto: Animal Quest</h1>
+    <h1 class="lang-en" style="display: none;">Project: Animal Quest</h1>
+
+    <nav>
+      <ul>
+        <li><a href="index.html" class="lang-pt">Início</a><a href="index.html" class="lang-en" style="display: none;">Home</a></li>
+        <li><a href="#descricao" class="lang-pt">Descrição</a><a href="#descricao" class="lang-en" style="display: none;">Description</a></li>
+        <li><a href="#impacto" class="lang-pt">Impacto</a><a href="#impacto" class="lang-en" style="display: none;">Impact</a></li>
+        <li><a href="#link" class="lang-pt">Link</a><a href="#link" class="lang-en" style="display: none;">Link</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section id="descricao">
+      <h2 class="lang-pt">Descrição do Projeto</h2>
+      <h2 class="lang-en" style="display: none;">Project Description</h2>
+      <p class="lang-pt">
+        O <strong>Animal Quest</strong> é um projeto desenvolvido com foco na acessibilidade e desenvolvimento da memória de pessoas com síndrome de Down. Ele visa criar uma experiência lúdica e interativa, estimulando habilidades cognitivas e promovendo inclusão.
+      </p>
+      <p class="lang-en" style="display: none;">
+        <strong>Animal Quest</strong> is a project focused on accessibility and memory development for people with Down syndrome. It aims to create a playful and interactive experience, stimulating cognitive skills and promoting inclusion.
+      </p>
+    </section>
+
+    <section id="impacto">
+      <h2 class="lang-pt">Impacto</h2>
+      <h2 class="lang-en" style="display: none;">Impact</h2>
+      <p class="lang-pt">
+        O projeto foi idealizado para proporcionar uma ferramenta educativa e divertida, ajudando no desenvolvimento motor e intelectual das crianças, ao mesmo tempo que promove conscientização sobre a importância da acessibilidade na tecnologia.
+      </p>
+      <p class="lang-en" style="display: none;">
+        The project was designed to provide an educational and fun tool, supporting the motor and intellectual development of children, while raising awareness about the importance of accessibility in technology.
+      </p>
+    </section>
+
+    <section id="link">
+      <h2 class="lang-pt">Acesse o Projeto</h2>
+      <h2 class="lang-en" style="display: none;">Access the Project</h2>
+      <p class="lang-pt">Você pode conhecer mais sobre o projeto e acessar o site oficial através do seguinte link:</p>
+      <p class="lang-en" style="display: none;">You can learn more about the project and access the official site through the following link:</p>
+
+      <a href="https://sites.google.com/cesar.school/g6-animalquest/in%C3%ADcio" target="_blank">🌐 Visitar site do Animal Quest</a><br />
+      <a href="https://github.com/BrunoAU/Animal-Quest" target="_blank">💻 Visitar GitHub do Animal Quest</a>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Bruno Augusto. Todos os direitos reservados.</p>
+  </footer>
+    <script>
+    const langButtons = document.querySelectorAll('.language-selector button[data-lang]');
+    langButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const lang = button.getAttribute('data-lang');
+        document.querySelectorAll('[class^="lang-"]').forEach(el => {
+          el.style.display = 'none';
+        });
+        document.querySelectorAll(`.lang-${lang}`).forEach(el => {
+          el.style.display = '';
+        });
+      });
+    });
+
+    const toggleTheme = document.getElementById('toggle-theme');
+    if (toggleTheme) {
+      toggleTheme.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+      });
+    }
+  </script>
+
+</body>
+</html>
